@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+
+# COPY ./sem_permissao.txt /secrets/
+
+# CMD cat /secrets/sem_permissao.txt
+
+# # docker image build -t permissao .
+
+RUN groupadd -g 3000 demo-group && useradd -r -u 4000 -g demo-group demo-user
+USER demo-user
+COPY ./sem_permissao.txt /secrets/
+CMD cat /secrets/.sem_permissacao.txt

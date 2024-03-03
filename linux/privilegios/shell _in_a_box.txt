@@ -1,0 +1,7 @@
+docker container run --rm --name shellinabox \
+-p 42000:4200 \
+-e SIAB_USER=shellinabox \
+-e SIAB_PASSWORD=123456 \
+-e SIAB_SUDO=true \
+-v `pwd`:/usr/src/dev \
+sspreitzer/shellinabox:latest
