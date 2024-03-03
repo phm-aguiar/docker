@@ -1,0 +1,13 @@
+docker network create sample-net
+docker network inspect sample-net | grep Subnet
+docker network create --driver bridge --subnet "10.1.0.0/29" test-net
+# uma rede criada com o driver bridge e com o subrede 10.1.0.0/29
+# teste 
+
+docker container run --name container2  -it --rm alpine:latest /bin/sh
+
+cria um docker na subrede test-net
+docker container run --name container3 --network test-net -it --rm alpine:latest /bin/sh
+
+cria um container sem rede
+docker container run --name container3 --network none -it --rm alpine:latest /bin/sh
