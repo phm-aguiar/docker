@@ -1,0 +1,3 @@
+-p da nome
+
+docker-compose -p meu-app up -d
