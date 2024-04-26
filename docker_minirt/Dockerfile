@@ -34,6 +34,8 @@ RUN apt-get update && \
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && \
     echo "alias gcc='clang'" >> ~/.bashrc && \
     echo "alias gcc='clang'" >> ~/.zshrc && \
+    echo "alias cc='clang'" >> ~/.bashrc && \
+    echo "alias cc='clang'" >> ~/.zshrc && \
     chsh -s $(which zsh)
 
 
